@@ -1,0 +1,131 @@
+/* variables */
+:root {
+    --dark-blue: #202435f3;
+    --grey-blue: #3c425f;
+    --green: #00ff88c5;
+    --glowing-green: #00ff88e1;
+}
+
+
+/* HTML tags */
+html, body {
+    height: 100%;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+body {
+    background-color: var(--dark-blue);
+    margin: 0;
+}
+
+
+/* general classes */
+.center-content-x {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* container classes */
+.upper-text {
+    text-align: center;
+    font-size: large;
+    color: var(--green);
+    margin-top: 40px;
+}
+
+/* desktop and tablet */
+@media screen and (min-width: 769px){
+    .container {
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%;
+        width: 500px;
+        height: 290px;
+        border-radius: 15px;
+        background-color: var(--grey-blue);
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .divider {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 40px;
+    }
+
+    .advice-text {
+        position: fixed;
+        width: 80%;
+        margin: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: x-large;
+        text-align: center;
+        color: white;
+    }
+
+    .dice {
+        position: fixed;
+        background-color: var(--green);
+        border-radius: 30px;
+        padding: 15px 15px 11px 15px;
+        top: 91%;
+    }
+
+    .dice:hover {
+        background-color: var(--glowing-green);
+        box-shadow: var(--glowing-green) 0px 0px 40px 0.5px;
+    }
+}
+
+/* mobile */
+@media screen and (max-width: 768px) {
+    .container {
+        position: absolute;
+        transform: translateY(-50%);
+        top: 45%;
+        width: 90%;
+        height: 350px;
+        border-radius: 15px;
+        background-color: var(--grey-blue);
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .divider {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 55px;
+    }
+
+    .advice-text {
+        position: fixed;
+        width: 70%;
+        margin: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: x-large;
+        text-align: center;
+        color: white;
+    }
+
+    .dice {
+        position: fixed;
+        background-color: var(--green);
+        border-radius: 30px;
+        padding: 18px 18px 14px 18px;
+        top: 92%;
+    }
+
+    .dice:active {
+        background-color: var(--glowing-green);
+        box-shadow: var(--glowing-green) 0px 0px 40px 0.5px;
+    }
+}
